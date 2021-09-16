@@ -1,5 +1,6 @@
 #gridContainer{
     height:640px;
     width: 640px;
-    background-color:coral;
+    display: flex;
+    flex-wrap: 8;
 }
