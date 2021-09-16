@@ -2,5 +2,5 @@
     height:640px;
     width: 640px;
     display: flex;
-    flex-wrap: 8;
+    flex-wrap: wrap;
 }
