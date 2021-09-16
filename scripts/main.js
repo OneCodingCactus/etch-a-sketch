@@ -13,16 +13,17 @@ for(let i=0;i<totalGridElements;i++){
     let idOfGridElement="gridElement"+i;
     idList.push(idOfGridElement);
     gridElement.setAttribute("id", idOfGridElement);
+    gridElement.addEventListener("mouseover", () => {
+        gridElement.style.backgroundColor="black";
+    })
     gridContainer.appendChild(gridElement);
 }
 
 console.log(idList);
-
-const gridElements=document.querySelectorAll("gridElement");
-
-gridElements.forEach((gridElement) => {
-    gridElement.addEventListener("hover", () => {
-        gridElement.style.backgroundColor="black";
-    })
-})
+/*
+for(let i=0;i<totalGridElements;i++){
+    document.querySelector(idList[i]){
+        
+}
+*/
 
