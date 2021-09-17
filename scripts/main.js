@@ -24,7 +24,10 @@ function fillTheGrid(){
 const clearButton=document.querySelector("#clearButton");
 
 function renewGrid(){
-    gridElementsPerSide=prompt("How many grid elements do you wish per side?");
+    do{
+        gridElementsPerSide=prompt("How many grid elements do you wish per side?");
+    }while(gridElementsPerSide<1||gridElementsPerSide>64||gridElementsPerSide-Math.floor(gridElementsPerSide)!=0)
+    
     totalGridElements=Math.pow(gridElementsPerSide,2);
     gridElementSize=640/gridElementsPerSide;
     gridElementSize=Math.round(Math.floor(gridElementSize*10))/10;
@@ -37,6 +40,5 @@ clearButton.addEventListener("click", () => {
     fillTheGrid();
 }
 )
-
 
 fillTheGrid();
