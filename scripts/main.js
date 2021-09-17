@@ -27,6 +27,7 @@ function renewGrid(){
     gridElementsPerSide=prompt("How many grid elements do you wish per side?");
     totalGridElements=Math.pow(gridElementsPerSide,2);
     gridElementSize=640/gridElementsPerSide;
+    gridElementSize=Math.round(Math.floor(gridElementSize*10))/10;
 }
 
 clearButton.addEventListener("click", () => {
